@@ -1,16 +1,22 @@
-# This is a sample Python script.
+import pandas as pd
+import ollama
+from ollama import Client
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+file_path = './datasets/UNSW/training_test_set/UNSW_NB15_training-set.csv'
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    #df = pd.read_csv(file_path)
+    #df = df.drop(columns=['id','attack_cat'])
+    #print(df.head())
+    client = Client(host='http://ollama:11434')
+    #client.pull('llama3')
+    for i in range(3):
+        response = client.chat(model='llama3', messages=[
+            {
+              'role': 'user',
+              'content': 'Chi è john Cerutti?',
+            },
+        ])
+        print(response['message']['content'])
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+

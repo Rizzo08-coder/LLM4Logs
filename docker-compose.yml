@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  llm4logs:
+    build: ./
+    networks:
+      - llm4logs
+    entrypoint: ["python", "main.py"]
+    volumes:
+      - ./:/llm4logs
+
+  ollama:
+    image: ollama/ollama
+    networks:
+      - llm4logs
+    ports:
+      - '11434:11434'
+    volumes:
+      - ollama:/root/.ollama
+
+networks:
+  llm4logs:
+
+volumes:
+  ollama:
