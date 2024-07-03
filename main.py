@@ -14,7 +14,7 @@ if __name__ == '__main__':
         response = client.chat(model='llama3', messages=[
             {
               'role': 'user',
-              'content': 'Chi è john Cerutti?',
+              'content': 'spiegami cosa è la cybersecurity?',
             },
         ])
         print(response['message']['content'])
