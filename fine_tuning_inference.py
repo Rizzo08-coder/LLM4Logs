@@ -4,8 +4,6 @@ import pandas as pd
 
 
 
-
-
 def nshots_prediction(row, model):
     client = Client(host='http://ollama:11434')
 
@@ -36,6 +34,10 @@ List of arguments passed to this process = {row['args']}
 
 if __name__ == '__main__':
     model_name = 'Llama3BETH'
+    output_filename = './datasets/BETH/output.csv'
     df = pd.read_csv('./datasets/BETH/inference_dataset_BETH.csv')
 
     df['predicted'] = df.apply(lambda row: nshots_prediction(row, model=model_name),axis=1)
+    df.to_csv(output_filename)
+
+
