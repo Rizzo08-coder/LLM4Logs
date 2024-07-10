@@ -5,10 +5,9 @@ services:
     build: ./
     networks:
       - llm4logs
-    entrypoint: ["python", "main.py"]
+    entrypoint: ["python", "fine_tuning_inference.py"]
     volumes:
       - ./:/llm4logs
-      #- ./huggingface:/root/.cache/huggingface
 
   ollama:
     image: ollama/ollama
@@ -17,8 +16,8 @@ services:
     ports:
       - '11434:11434'
     volumes:
-      - ollama:/root/.ollama
-
+      - ./ollama:/root/.ollama
+      - ./huggingface:/root/models/
 networks:
   llm4logs:
 
