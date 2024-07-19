@@ -7,10 +7,6 @@ Welcome to the repository for advanced Large Language Model (LLM) inference. Thi
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Configuration](#configuration)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
 
 ## Prerequisites
 
