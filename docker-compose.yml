@@ -5,7 +5,7 @@ services:
     build: ./
     networks:
       - llm4logs
-    entrypoint: ["python", "fine_tuning_inference.py"]
+    entrypoint: ["python", "output_analysis.py"]
     volumes:
       - ./:/llm4logs
 
