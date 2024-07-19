@@ -2,22 +2,25 @@ version: '3.8'
 
 services:
   llm4logs:
-    build: ./
+    build:
+      context: ./
+      dockerfile: Dockerfile.LLM
     networks:
       - llm4logs
-    entrypoint: ["python", "output_analysis.py"]
+    entrypoint: ["python", "fine_tuning_inference.py"]
     volumes:
       - ./:/llm4logs
 
   ollama:
-    image: ollama/ollama
+    build:
+      context: ./
+      dockerfile: Dockerfile.ollama
     networks:
       - llm4logs
     ports:
       - '11434:11434'
     volumes:
-      - ./ollama:/root/.ollama
-      - ./huggingface:/root/models/
+      - ollama:/root/.ollama
 networks:
   llm4logs:
 

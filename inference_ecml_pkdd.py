@@ -58,10 +58,10 @@ if __name__ == '__main__':
 
     output_filename = f'ecmlpkdd-{model_name if ":" not in model_name else model_name.split(":")[0]}-{number_of_shots}.csv'
 
-    training_dataset = './datasets/ECML_PKDD/fine_tune_dataset.csv'
+    training_dataset = './datasets/ECMLPKDD/fine_tune_dataset.csv'
     df_training = pd.read_csv(training_dataset)
 
-    inference_dataset = './datasets/ECML_PKDD/inference_dataset.csv'
+    inference_dataset = './datasets/ECMLPKDD/inference_dataset.csv'
     df_inference = pd.read_csv(inference_dataset)
 
     client = Client(host='http://ollama:11434')

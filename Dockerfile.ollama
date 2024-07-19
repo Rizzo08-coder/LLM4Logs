@@ -1,0 +1,11 @@
+FROM ollama/ollama
+RUN apt update && apt install git-lfs -y
+RUN git clone https://huggingface.co/Rizzo08/Llama3BETH
+RUN nohup bash -c "ollama serve &" && sleep 5 && ollama create llama3-beth -f ./Llama3BETH/Modelfile
+RUN rm -dr Llama3BETH
+RUN git clone https://huggingface.co/Rizzo08/Llama3UNSW
+RUN nohup bash -c "ollama serve &" && sleep 5 && ollama create llama3-unsw -f ./Llama3UNSW/Modelfile
+RUN rm -dr Llama3UNSW
+RUN git clone https://huggingface.co/Rizzo08/Llama3ECMLPKDD
+RUN nohup bash -c "ollama serve &" && sleep 5 && ollama create llama3-ecmlpkdd -f ./Llama3ECMLPKDD/Modelfile
+RUN rm -dr Llama3ECMLPKDD

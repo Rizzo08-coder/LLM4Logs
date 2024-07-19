@@ -63,7 +63,7 @@ if __name__ == '__main__':
     df_inference = pd.read_csv(inference_dataset)
 
     client = Client(host='http://ollama:11434')
-    # client.pull(model_name)
+    client.pull(model_name)
 
     df_inference['predicted'] = df_inference.apply(lambda row: nshots_prediction(row, model=model_name, shots=number_of_shots, useJson=useJson), axis=1)
 
