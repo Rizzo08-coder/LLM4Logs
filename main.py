@@ -1,5 +1,24 @@
 import pandas as pd
 from ollama import Client
+import json
+
+def extract_json(text):
+    jsonstr = ''
+    brackets = 0
+    for c in text:
+        if c == '{':
+            brackets += 1
+            jsonstr += c
+        elif c == '}':
+            brackets -= 1
+            jsonstr += c
+            if brackets == 0:
+                break
+        elif brackets > 0:
+            jsonstr += c
+
+    return json.loads(jsonstr)
+
 
 def nshots_prediction(row, model='llama3', shots=0):
     messages = [
