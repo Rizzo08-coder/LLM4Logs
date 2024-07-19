@@ -31,7 +31,7 @@ There will be created two containers:
 
 ## Usage
 
-Python scripts for running inferences with generic LLMs are organized by dataset (inference_beth.py, inference_ecml_pkdd.py, inference_unsw.py), so the entry-point in the `docker-compose.yml` file needs to be modified based on the dataset you want to use.
+Python scripts for running inferences with generic LLMs are organized by dataset (inference_beth.py, inference_ecml_pkdd.py, inference_unsw.py), so the entry-point on llm4logs service in `docker-compose.yml` file needs to be modified based on the dataset you want to use.
 
 Each of these scripts contains several hyperparameters to set:
 - `model_name`: The name of the model to use for inferences, referring to the models available on Ollama.
