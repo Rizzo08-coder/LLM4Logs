@@ -93,7 +93,7 @@ def zeroshot(row, model):
 if __name__ == '__main__':
     model_name = 'llama3-beth'
     output_filename = './finetune-llama3-beth.csv'
-    df = pd.read_csv('datasets/BETH/inference_dataset_BETH.csv')
+    df = pd.read_csv('datasets/BETH/inference_dataset.csv')
 
     df['predicted'] = df.apply(lambda row: zeroshot(row, model=model_name), axis=1)
     print(sum(abs(df['evil'] - df['predicted'])))

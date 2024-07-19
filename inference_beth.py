@@ -80,10 +80,10 @@ if __name__ == '__main__':
     number_of_shots = 5
     output_filename = f'beth-deepseekcoder-{number_of_shots}.csv'
 
-    training_dataset = './datasets/BETH/fine_tune_dataset_BETH.csv'
+    training_dataset = './datasets/BETH/fine_tune_dataset.csv'
     df_training = pd.read_csv(training_dataset)
 
-    test_dataset = './datasets/BETH/inference_dataset_BETH.csv'
+    test_dataset = './datasets/BETH/inference_dataset.csv'
     df_test = pd.read_csv(test_dataset)
 
     client = Client(host='http://ollama:11434')
