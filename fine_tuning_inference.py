@@ -19,7 +19,7 @@ def zeroshot(client, row, model):
 
 
 if __name__ == '__main__':
-    #iperparametro -> 3 valori ammessi:
+    # Hyperparameters -> either one of these three:
     # - llama3-beth
     # - llama3-unsw
     # - llama3-ecmlpkdd

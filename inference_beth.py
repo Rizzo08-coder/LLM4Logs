@@ -48,9 +48,9 @@ log files. You will receive the properties of an event from a logged system proc
         return 2
 
 if __name__ == '__main__':
-    #iperparametri: modificare a piacere
+    # Hyperparameters: update as you prefer
     model_name = 'deepseek-coder:6.7b'
-    number_of_shots = 5
+    number_of_shots = 5 # >= 0
     useJson = True
 
 

@@ -50,9 +50,9 @@ Do not print anything else, print only the correct digit, and do not provide exp
         return 2
 
 if __name__ == '__main__':
-    #iperparametri: da modificare a piacere
+    # Hyperparameters: update as you prefer
     model_name = 'codellama'
-    number_of_shots = 1
+    number_of_shots = 1 # >= 0
     useJson = True
 
     output_filename = f'unsw-{model_name if ":" not in model_name else model_name.split(":")[0]}-{number_of_shots}.csv'

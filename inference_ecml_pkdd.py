@@ -51,9 +51,9 @@ You will receive dumps of HTTP request and you will need to determine if the pro
         return 2
 
 if __name__ == '__main__':
-    #iperparametri: modificare a piacere
+    # Hyperparameters: update as you prefer
     model_name = 'deepseek-coder:6.7b'
-    number_of_shots = 1
+    number_of_shots = 1 # >= 0
     useJson = True
 
     output_filename = f'ecmlpkdd-{model_name if ":" not in model_name else model_name.split(":")[0]}-{number_of_shots}.csv'

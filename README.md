@@ -1,6 +1,7 @@
-# Advanced LLM Inference Environment
+# LLM4Logs
 
-Welcome to the repository for advanced Large Language Model (LLM) inference. This guide will assist you in setting up the environment and configuring the necessary components.
+LLM4Logs tries to evaluate LLM performance with respect to log files analysis in the context of cybersecurity.
+This guide will assist you in setting up the environment and configuring the necessary components.
 
 ## Table of Contents
 
@@ -24,9 +25,16 @@ git clone https://github.com/Rizzo08-coder/LLM4Logs
 docker compose up
 ```
 
-There will be created two containers:
-- `llm4logs` -> contains the python interpreter and dependencies 
-- `ollama` -> contains ollama image and the 3 finetuned LLM Models (llama3-beth, llama3-unsw, llama3-ecmlpkdd)
+There are two containers:
+- `llm4logs`: contains the Python interpreter and related dependencies
+- `ollama`: based on the `ollama/ollama` image and includes on top of it the 3 finetuned LLM Models (llama3-beth, llama3-unsw, llama3-ecmlpkdd)
+
+The images need to be built from the base provided by Docker.
+Dependency installation and model building may take a while, and the resulting images may become quite large.
+
+If you want to enable your Nvidia GPU for the inference process you can follow the official
+[guidelines for the base `ollama/ollama` image](https://hub.docker.com/r/ollama/ollama) and update accordingly
+the provided Docker Compose file.
 
 
 ## Usage
