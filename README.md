@@ -3,6 +3,11 @@
 LLM4Logs tries to evaluate LLM performance with respect to log files analysis in the context of cybersecurity.
 This guide will assist you in setting up the environment and configuring the necessary components.
 
+The Colab notebooks used for the fine-tuning of the base Llama3 models are the following:
+- [BETH](https://colab.research.google.com/drive/1Xu4gaapKSQc_Cva4vX23a-GfXfTUcOJq?usp=drive_link) - [huggingface](https://huggingface.co/Rizzo08/Llama3BETH)
+- [UNSW](https://colab.research.google.com/drive/1r3cjKq6xGjmYzb-BaYPM0isj-EE5Ksi8?usp=drive_link) - [huggingface](https://huggingface.co/Rizzo08/Llama3UNSW)
+- [ECML-PKDD](https://colab.research.google.com/drive/1x8Jt0EBkaOWMDhGtIOlnrzAPihW4BLxh?usp=drive_link) - [huggingface](https://huggingface.co/Rizzo08/Llama3ECMLPKDD)
+
 ## Table of Contents
 
 - [Prerequisites](#prerequisites)
